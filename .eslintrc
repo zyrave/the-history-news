@@ -1,0 +1,137 @@
+{
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true,
+    "jest": true
+  },
+  "globals": {
+    "__DEV__": true
+  },
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:jsx-a11y/recommended",
+    "plugin:jest/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-empty-interface": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/no-unused-vars": "error",
+    "arrow-body-style": ["error", "as-needed"],
+    "comma-dangle": "off",
+    "consistent-return": "off",
+    "func-names": "off",
+    "global-require": "off",
+    "import": "off",
+    "import/extensions": "off",
+    "import/no-extraneous-dependencies": "off",
+    "import/prefer-default-export": "off",
+    "jsx-a11y/accessible-emoji": "off",
+    "jsx-a11y/anchor-is-valid": [
+      "warn",
+      {
+        "aspects": ["invalidHref"]
+      }
+    ],
+    "jsx-a11y/href-no-hash": "off",
+    "jsx-a11y/label-has-associated-control": "off",
+    "jsx-a11y/label-has-for": "off",
+    "linebreak-style": "off",
+    "max-len": "off",
+    "no-alert": "off",
+    "no-console": "off",
+    "no-param-reassign": [
+      "error",
+      {
+        "props": false
+      }
+    ],
+    "no-restricted-globals": ["off", "confirm"],
+    "no-underscore-dangle": "off",
+    "no-unused-vars": "off",
+    "no-use-before-define": "off",
+    "no-shadow": [
+      "error",
+      {
+        "hoist": "all",
+        "allow": ["resolve", "reject", "done", "next", "err", "error"]
+      }
+    ],
+    "prettier/prettier": [
+      "error",
+      {
+        "semi": true,
+        "trailingComma": "none",
+        "singleQuote": true,
+        "printWidth": 80,
+        "useTabs": false,
+        "tabWidth": 2,
+        "endOfLine": "auto"
+      }
+    ],
+    "quotes": [
+      "error",
+      "single",
+      {
+        "avoidEscape": true,
+        "allowTemplateLiterals": true
+      }
+    ],
+    "radix": "off",
+    "react/display-name": "off",
+    "react/forbid-prop-types": "off",
+    "react/jsx-filename-extension": [
+      "error",
+      {
+        "extensions": [".js", ".jsx", ".tsx"]
+      }
+    ],
+    "react/no-unescaped-entities": "off",
+    "react/prop-types": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/self-closing-comp": [
+      "error",
+      {
+        "component": true,
+        "html": true
+      }
+    ],
+    "space-before-function-parent": "off"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "jest": {
+      "version": "detect"
+    },
+    "import/resolver": {
+      "alias": [
+        ["@/assets", "./src/assets"],
+        ["@/components", "./src/components"],
+        ["@/config", "./src/config"],
+        ["@/contexts", "./src/contexts"],
+        ["@/generated", "./src/generated"],
+        ["@/graphql", "./src/graphql"],
+        ["@/hooks", "./src/hooks"],
+        ["@/modules", "./src/modules"],
+        ["@/pages", "./src/pages"],
+        ["@/styles", "./src/styles"],
+        ["@/types", "./src/types"],
+        ["@/utils", "./src/utils"]
+      ]
+    }
+  }
+}
